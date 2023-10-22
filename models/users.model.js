@@ -20,6 +20,10 @@ const usersSchema = mongoose.Schema({
         // type: [String],
         type: [mongoose.Schema.Types.Mixed]
     },
+    bided_nfts: {
+        // type: [String],
+        type: [mongoose.Schema.Types.Mixed]
+    },
     amount: {
         type: Number,
         require: true
