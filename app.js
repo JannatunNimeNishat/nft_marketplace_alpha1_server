@@ -49,6 +49,8 @@ app.use('/artists', artistRouter);
 //users router
 app.use('/users', usersRouter);
 
+//nft routes
+
 
 
 
