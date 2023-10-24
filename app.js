@@ -14,6 +14,7 @@ const { createJSONWebToken } = require('./helper/jsonwebtoken');
 //router
 const artistRouter = require('./routes/artists.route');
 const usersRouter = require('./routes/users.router');
+const nftRouter = require('./routes/nfts.route');
 
 // api security
 const limiter = rateLimit({
@@ -37,8 +38,8 @@ require('./config/db')
 //jwt api
 app.post('/get_jwt_access_token', (req, res) => {
     const email = req.body;
-    const token = createJSONWebToken(email,'1h');
-    res.send({token})
+    const token = createJSONWebToken(email, '1h');
+    res.send({ token })
 })
 
 
@@ -50,7 +51,7 @@ app.use('/artists', artistRouter);
 app.use('/users', usersRouter);
 
 //nft routes
-
+app.use('/nfts', nftRouter);
 
 
 
