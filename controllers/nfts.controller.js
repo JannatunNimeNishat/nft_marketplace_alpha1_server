@@ -3,9 +3,13 @@ const createNft = (req, res) => {
 
 }
 
+const getNft = (req, res) => {
+
+}
 
 
 
 
 
-module.exports = { createNft }
+
+module.exports = { createNft,getNft }
